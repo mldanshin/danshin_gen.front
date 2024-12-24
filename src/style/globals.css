@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.aside {
+    padding: 0.5rem;
+    @media screen and (min-width: 781px) {
+        width: 25vw;
+    }
+    @media screen and (min-width: 651px) and (max-width: 780px) {
+        width: 30vw;
+    }
+    @media screen and (min-width: 551px) and (max-width: 650px) {
+        width: 40vw;
+    }
+    @media screen and (max-width: 550px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.dark-theme {
+    color: #b7b7b7;
+    a {
+        color: #b7b7b7;
+    }
+    input, select {
+        background-color: #332418;
+        color: #b7b7b7;
+    }
+    .aside {
+        background-color: #2c002f;
+    }
+    .footer {
+        background-color: #200022;
+        color: wheat;
+    }
+    .header {
+        background-color: #200022;
+    }
+    .main {
+        background-color: #2c002f;
+    }
+    .people-list {
+        background-color: #332418;
+    }
+    .person-card > * {
+        @media screen and (min-width: 651px) {
+            background-color: #332418;
+        }
+        @media screen and (max-width: 650px) {
+            background-color: transparent;
+        }
+    }
+    .person-card > :nth-child(2n+1) {
+        @media screen and (max-width: 650px) {
+            color: #3c7d63;
+        }
+    }
+}
+
+.dates-li {
+    padding-bottom: 1rem;
+}
+
+.filter-order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer {
+    flex: 0 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-git-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.header {
+    flex: 1 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-nav-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.light-theme {
+    color: #000000;
+    a {
+        color: #000000;
+    }
+    .aside {
+        background-color: #e18239;
+    }
+    .footer {
+        background-color: #c200d3;
+        color: wheat;
+    }
+    .header {
+        background-color: #c200d3;
+    }
+    .main {
+        background-color: #e18239;
+    }
+    .people-list {
+        background-color: #d3915d;
+    }
+    .person-card > * {
+        @media screen and (min-width: 651px) {
+            background-color: #d3915d;
+        }
+        @media screen and (max-width: 650px) {
+            background-color: transparent;
+        }
+    }
+    .person-card > :nth-child(2n+1) {
+        @media screen and (max-width: 650px) {
+            color: #5a5e88;
+        }
+    }
+}
+
+.main {
+    padding: 1rem;
+    overflow-x: auto;
+    min-height: 100vh;
+    @media screen and (min-width: 780px) {
+        width: 75vw;
+    }
+    @media screen and (min-width: 651px) and (max-width: 780px) {
+        width: 70vw;
+    }
+    @media screen and (max-width: 650px) {
+        width: 60vw;
+    }
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.order-container {
+    display: flex;
+    gap: 1rem;
+    @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    @media screen and (max-width: 999px) {
+        flex-direction: column;
+        gap: 1rem; 
+    }
+}
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.person {
+    padding: 1rem 0;
+    @media screen and (min-width: 1001px) {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+    }
+
+    @media screen and (min-width: 781px) and (max-width: 1000px) {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 0;
+    }
+    @media screen and (max-width: 780px) {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+}
+
+.person-card {
+    min-width: 70%;
+    @media screen and (min-width: 780px) {
+        padding-right: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 0.5rem;
+    }
+    @media screen and (min-width: 651px) and (max-width: 780px) {
+        padding-bottom: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 0.5rem;
+    }
+    @media screen and (max-width: 650px) {
+        padding-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.person-card > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (min-width: 781px) {
+        padding: 0.3rem;
+    }
+    @media screen and (min-width: 651px) and (max-width: 780px) {
+        padding: 0.3rem;
+    }
+    @media screen and (max-width: 650px) {
+        padding: 0;
+    }
+}
+
+.person-card > :nth-child(2n+1) {
+    @media screen and (max-width: 650px) {
+        padding-top: 1.5rem;
+    }
+}
+
+.person-card-cell-list {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+}
+
+.person-card-cell-list-2 {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+}
+
+.person-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person-photo-list {
+    overflow-y: auto;
+    li {
+        margin-top: 1rem;
+    }
+}
+
+.person-photo {
+    @media screen and (min-width: 780px) {
+        width: 20vw;
+    }
+    @media screen and (min-width: 651px) and (max-width: 780px) {
+        width: 45vw;
+    }
+    @media screen and (max-width: 650px) {
+        width: 45vw;
+    }
+}
+
+.people-list {
+    overflow-y: auto;
+    height: 100vh;
+    position: sticky;
+    top: 1rem;
+    @media screen and (max-width: 550px) {
+        padding-bottom: 15rem;
+    }   
+}
+
+.people-person-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.2rem 0;
+    padding: 0.4rem 0;
+    row-gap: 1rem;
+}
+
+#people_search {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 18px;
+}
+
+.tree__button-show-person {
+    cursor: pointer;
+}
+
+.tree__button-show-tree {
+    cursor: pointer;
+}
+
+.tree-person-container {
+    background-color: #c200d3;
+}
+
+.tree-object-container {
+    overflow-x: auto;
+}
+
+.tree-toggle-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tree-toggle {
+    height: 2rem;
+}

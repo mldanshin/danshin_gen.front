@@ -1,0 +1,24 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint",
+    "test": "jest --watch"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.15",
+    "eslint": "9.13.0",
+    "eslint-config-next": "15.0.1",
+    "next": "^15.0.1",
+    "react": "18.2.0",
+    "react-cookie": "^7.2.1",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}
